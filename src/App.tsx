@@ -7,6 +7,11 @@ import Events from './pages/Events';
 import Jobs from './pages/Jobs';
 import Community from './pages/Community';
 import Merchandise from './pages/Merchandise';
+import Education from './pages/Education';
+import Contact from './pages/Contact';
+import Privacy from './pages/Privacy';
+import Terms from './pages/Terms';
+import Membership from './pages/Membership';
 
 export default function App() {
   return (
@@ -19,6 +24,11 @@ export default function App() {
           <Route path="jobs" element={<Jobs />} />
           <Route path="community" element={<Community />} />
           <Route path="merchandise" element={<Merchandise />} />
+          <Route path="education" element={<Education />} />
+          <Route path="contact" element={<Contact />} />
+          <Route path="privacy" element={<Privacy />} />
+          <Route path="terms" element={<Terms />} />
+          <Route path="membership" element={<Membership />} />
         </Route>
       </Routes>
     </Router>

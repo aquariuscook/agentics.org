@@ -55,28 +55,52 @@ export default function Hero() {
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
+            initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1, delay: 0.2 }}
             className="relative hidden lg:block"
           >
-            <div className="relative z-10 bg-neutral-900 aspect-square rounded-full p-12 flex items-center justify-center overflow-hidden border-[16px] border-neutral-50">
-              <div className="absolute inset-0 opacity-20">
-                <img 
-                  src="https://picsum.photos/seed/agentics/800/800" 
-                  alt="AI Visualization" 
-                  className="w-full h-full object-cover grayscale"
-                  referrerPolicy="no-referrer"
-                />
-              </div>
-              <div className="relative z-20 text-center">
-                <Globe size={120} className="text-brand mx-auto mb-6 animate-pulse" />
-                <div className="font-display text-4xl text-white font-bold tracking-tighter uppercase">Global Network</div>
+            <div className="relative z-10 aspect-square overflow-hidden rounded-full border-[12px] border-neutral-50 shadow-2xl">
+              <img 
+                src="https://images.unsplash.com/photo-1635070041078-e363dbe005cb?auto=format&fit=crop&q=80&w=1200" 
+                alt="Neural Network Visualization" 
+                className="w-full h-full object-cover grayscale brightness-50 hover:grayscale-0 hover:brightness-100 transition-all duration-1000"
+                referrerPolicy="no-referrer"
+              />
+              <div className="absolute inset-0 flex items-center justify-center">
+                <div className="text-center">
+                  <Globe size={80} className="text-brand mx-auto mb-4 animate-pulse" />
+                  <div className="font-display text-2xl text-white font-bold tracking-tighter uppercase">Neural Mesh</div>
+                  <div className="text-brand text-[10px] font-bold uppercase tracking-[0.3em]">Active Protocol</div>
+                </div>
               </div>
             </div>
-            {/* Decorative elements */}
-            <div className="absolute -top-4 -right-4 w-24 h-24 bg-brand rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob"></div>
-            <div className="absolute -bottom-8 -left-8 w-32 h-32 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-2000"></div>
+            
+            {/* Floating Data Points */}
+            <motion.div 
+              animate={{ x: [0, 15, 0], y: [0, -10, 0] }}
+              transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+              className="absolute top-10 -right-4 z-20 bg-white/90 backdrop-blur-sm p-3 shadow-lg border border-neutral-100 rounded-full px-5"
+            >
+              <div className="flex items-center gap-2">
+                <div className="w-2 h-2 bg-brand rounded-full"></div>
+                <span className="text-[10px] font-bold uppercase tracking-widest">Synapse: 0.4ms</span>
+              </div>
+            </motion.div>
+
+            <motion.div 
+              animate={{ x: [0, -15, 0], y: [0, 10, 0] }}
+              transition={{ duration: 7, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+              className="absolute bottom-10 -left-4 z-20 bg-white/90 backdrop-blur-sm p-3 shadow-lg border border-neutral-100 rounded-full px-5"
+            >
+              <div className="flex items-center gap-2">
+                <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
+                <span className="text-[10px] font-bold uppercase tracking-widest">Nodes: 1.2M</span>
+              </div>
+            </motion.div>
+
+            {/* Decorative Blobs */}
+            <div className="absolute inset-0 bg-brand/5 rounded-full filter blur-3xl -z-10 animate-pulse"></div>
           </motion.div>
         </div>
       </div>

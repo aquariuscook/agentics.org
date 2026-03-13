@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 
 const navItems = [
   { name: 'About', href: '/about' },
+  { name: 'Education', href: '/education' },
   { name: 'Events', href: '/events' },
   { name: 'Jobs', href: '/jobs' },
   { name: 'Community', href: '/community' },
@@ -38,7 +39,7 @@ export default function Navbar() {
               </Link>
             ))}
             
-            <Link to="/#join" className="btn-primary">
+            <Link to="/membership" className="btn-primary">
               Join
             </Link>
           </div>
@@ -76,7 +77,7 @@ export default function Navbar() {
                 </Link>
               ))}
               <div className="pt-4">
-                <Link to="/#join" className="btn-primary block text-center py-4" onClick={() => setIsOpen(false)}>
+                <Link to="/membership" className="btn-primary block text-center py-4" onClick={() => setIsOpen(false)}>
                   Join
                 </Link>
               </div>

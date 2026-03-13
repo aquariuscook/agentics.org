@@ -1,5 +1,6 @@
 import React from 'react';
 import { Twitter, Linkedin, Github, Mail } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 export default function Footer() {
   return (
@@ -36,18 +37,18 @@ export default function Footer() {
             <div className="space-y-4">
               <h4 className="font-display text-sm font-bold uppercase tracking-widest text-neutral-500">Explore</h4>
               <ul className="space-y-2 text-sm text-neutral-400">
-                <li><a href="#about" className="hover:text-white transition-colors">About</a></li>
-                <li><a href="#events" className="hover:text-white transition-colors">Events</a></li>
-                <li><a href="#education" className="hover:text-white transition-colors">Education</a></li>
-                <li><a href="#jobs" className="hover:text-white transition-colors">Jobs</a></li>
+                <li><Link to="/about" className="hover:text-white transition-colors">About</Link></li>
+                <li><Link to="/events" className="hover:text-white transition-colors">Events</Link></li>
+                <li><Link to="/education" className="hover:text-white transition-colors">Education</Link></li>
+                <li><Link to="/jobs" className="hover:text-white transition-colors">Jobs</Link></li>
               </ul>
             </div>
             <div className="space-y-4">
               <h4 className="font-display text-sm font-bold uppercase tracking-widest text-neutral-500">Connect</h4>
               <ul className="space-y-2 text-sm text-neutral-400">
-                <li><a href="#community" className="hover:text-white transition-colors">Community</a></li>
-                <li><a href="#merchandise" className="hover:text-white transition-colors">Merchandise</a></li>
-                <li><a href="#join" className="hover:text-white transition-colors">Join</a></li>
+                <li><Link to="/community" className="hover:text-white transition-colors">Community</Link></li>
+                <li><Link to="/merchandise" className="hover:text-white transition-colors">Merchandise</Link></li>
+                <li><Link to="/membership" className="hover:text-white transition-colors">Join</Link></li>
               </ul>
             </div>
           </div>
@@ -56,9 +57,9 @@ export default function Footer() {
           <div className="space-y-4">
             <h4 className="font-display text-sm font-bold uppercase tracking-widest text-neutral-500">Legal</h4>
             <ul className="space-y-2 text-sm text-neutral-400">
-              <li><a href="#" className="hover:text-white transition-colors">Contact</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Privacy Policy</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Terms of Use</a></li>
+              <li><Link to="/contact" className="hover:text-white transition-colors">Contact</Link></li>
+              <li><Link to="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link></li>
+              <li><Link to="/terms" className="hover:text-white transition-colors">Terms of Use</Link></li>
             </ul>
             <div className="pt-8 text-xs text-neutral-600">
               © 2026 Agentics Foundation. All rights reserved.
@@ -69,3 +70,4 @@ export default function Footer() {
     </footer>
   );
 }
+
