@@ -1,0 +1,28 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=Barlow+Condensed:wght@600;700&display=swap');
+
+@theme {
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+  --font-display: "Barlow Condensed", sans-serif;
+  
+  --color-brand: #E25C3D;
+  --color-brand-dark: #c14a2e;
+}
+
+@layer base {
+  body {
+    @apply font-mono bg-neutral-50 text-neutral-900 antialiased;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display uppercase tracking-tight;
+  }
+}
+
+.nav-link {
+  @apply text-sm font-medium hover:text-brand transition-colors duration-200;
+}
+
+.btn-primary {
+  @apply bg-brand text-white px-6 py-2 rounded-none font-display uppercase tracking-wider hover:bg-brand-dark transition-all duration-200;
+}
