@@ -87,7 +87,7 @@ export default function Membership() {
                 ))}
               </ul>
               
-              <button className={`w-full py-3 font-display uppercase tracking-wider text-sm font-bold transition-all ${tier.highlight ? 'bg-brand text-white hover:bg-brand-dark' : 'bg-neutral-900 text-white hover:bg-neutral-800'}`}>
+              <button className={`w-full py-3 font-display uppercase tracking-wider text-sm font-bold ${tier.highlight ? 'bg-brand text-white hover:bg-brand-dark' : 'bg-neutral-900 text-white hover:bg-neutral-800'}`}>
                 {tier.cta}
               </button>
             </div>

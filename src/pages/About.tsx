@@ -30,7 +30,7 @@ export default function About() {
             <img 
               src="https://picsum.photos/seed/mission/800/600" 
               alt="Team working" 
-              className="w-full h-auto grayscale hover:grayscale-0 transition-all duration-500"
+              className="w-full h-auto grayscale"
               referrerPolicy="no-referrer"
             />
             <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-brand/10 -z-10"></div>

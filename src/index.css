@@ -5,8 +5,8 @@
   --font-mono: "IBM Plex Mono", ui-monospace, monospace;
   --font-display: "Barlow Condensed", sans-serif;
   
-  --color-brand: #E25C3D;
-  --color-brand-dark: #c14a2e;
+  --color-brand: #FF6321;
+  --color-brand-dark: #E24A00;
 }
 
 @layer base {
@@ -20,9 +20,9 @@
 }
 
 .nav-link {
-  @apply text-sm font-medium hover:text-brand transition-colors duration-200;
+  @apply text-sm font-medium hover:text-brand;
 }
 
 .btn-primary {
-  @apply bg-brand text-white px-6 py-2 rounded-none font-display uppercase tracking-wider hover:bg-brand-dark transition-all duration-200;
+  @apply bg-brand text-white px-6 py-2 rounded-none font-display uppercase tracking-wider hover:bg-brand-dark;
 }

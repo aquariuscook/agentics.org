@@ -16,15 +16,15 @@ export default function Contact() {
             <form className="space-y-6">
               <div>
                 <label className="block text-xs font-bold uppercase tracking-widest text-neutral-500 mb-2">Name</label>
-                <input type="text" className="w-full p-4 bg-neutral-50 border border-neutral-200 focus:border-brand outline-none transition-colors" />
+                <input type="text" className="w-full p-4 bg-neutral-50 border border-neutral-200 focus:border-brand outline-none" />
               </div>
               <div>
                 <label className="block text-xs font-bold uppercase tracking-widest text-neutral-500 mb-2">Email</label>
-                <input type="email" className="w-full p-4 bg-neutral-50 border border-neutral-200 focus:border-brand outline-none transition-colors" />
+                <input type="email" className="w-full p-4 bg-neutral-50 border border-neutral-200 focus:border-brand outline-none" />
               </div>
               <div>
                 <label className="block text-xs font-bold uppercase tracking-widest text-neutral-500 mb-2">Message</label>
-                <textarea rows={6} className="w-full p-4 bg-neutral-50 border border-neutral-200 focus:border-brand outline-none transition-colors resize-none"></textarea>
+                <textarea rows={6} className="w-full p-4 bg-neutral-50 border border-neutral-200 focus:border-brand outline-none resize-none"></textarea>
               </div>
               <button className="btn-primary w-full py-4">Send Message</button>
             </form>

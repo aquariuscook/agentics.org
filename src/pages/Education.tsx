@@ -17,8 +17,8 @@ export default function Education() {
             { title: 'Video Library', icon: <Briefcase />, desc: 'Webinars and technical deep dives.' },
             { title: 'Case Studies', icon: <Users />, desc: 'Real-world implementations.' }
           ].map((edu, i) => (
-            <div key={i} className="p-8 border border-neutral-100 hover:shadow-xl transition-all group">
-              <div className="w-12 h-12 bg-neutral-50 flex items-center justify-center text-brand mb-6 group-hover:bg-brand group-hover:text-white transition-colors">
+            <div key={i} className="p-8 border border-neutral-100 group">
+              <div className="w-12 h-12 bg-neutral-50 flex items-center justify-center text-brand mb-6">
                 {edu.icon}
               </div>
               <h3 className="text-lg font-bold mb-2">{edu.title}</h3>

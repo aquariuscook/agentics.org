@@ -19,14 +19,14 @@ export default function Events() {
             { title: 'AI Ethics Roundtable', date: 'Feb 10', location: 'Virtual', type: 'Discussion' },
             { title: 'Hackathon: Agents for Good', date: 'Mar 20-22', location: 'Berlin, DE', type: 'Hackathon' }
           ].map((event, i) => (
-            <div key={i} className="group bg-white p-8 border border-neutral-100 hover:border-brand transition-all cursor-pointer shadow-sm hover:shadow-xl">
+            <div key={i} className="bg-white p-8 border border-neutral-100 cursor-pointer shadow-sm">
               <div className="text-brand font-display font-bold mb-2">{event.date}</div>
-              <h3 className="text-xl font-bold mb-4 group-hover:text-brand transition-colors">{event.title}</h3>
+              <h3 className="text-xl font-bold mb-4">{event.title}</h3>
               <div className="flex items-center gap-2 text-sm text-neutral-400 mb-6">
                 <Calendar size={14} />
                 <span>{event.location} • {event.type}</span>
               </div>
-              <a href="#" className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest group-hover:gap-4 transition-all">
+              <a href="#" className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest">
                 View Details <ArrowRight size={14} />
               </a>
             </div>

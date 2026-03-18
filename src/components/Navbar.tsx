@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Menu, X } from 'lucide-react';
-import { motion, AnimatePresence } from 'motion/react';
 import { Link } from 'react-router-dom';
+import Logo from './Logo';
 
 const navItems = [
   { name: 'About', href: '/about' },
@@ -22,7 +22,7 @@ export default function Navbar() {
           {/* Logo */}
           <div className="flex-shrink-0 flex items-center">
             <Link to="/" className="flex items-center gap-2">
-              <div className="w-10 h-10 bg-brand flex items-center justify-center text-white font-display text-2xl font-bold">A</div>
+              <Logo className="w-12 h-6 text-brand" />
               <span className="font-display text-2xl font-bold tracking-tighter uppercase hidden sm:block">Agentics</span>
             </Link>
           </div>
@@ -57,34 +57,27 @@ export default function Navbar() {
       </div>
 
       {/* Mobile Nav */}
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
-            className="lg:hidden bg-white border-b border-neutral-200 overflow-hidden"
-          >
-            <div className="px-4 pt-2 pb-6 space-y-1">
-              {navItems.map((item) => (
-                <Link
-                  key={item.name}
-                  to={item.href}
-                  className="block px-3 py-4 text-lg font-display uppercase tracking-wide border-b border-neutral-100"
-                  onClick={() => setIsOpen(false)}
-                >
-                  {item.name}
-                </Link>
-              ))}
-              <div className="pt-4">
-                <Link to="/membership" className="btn-primary block text-center py-4" onClick={() => setIsOpen(false)}>
-                  Join
-                </Link>
-              </div>
+      {isOpen && (
+        <div className="lg:hidden bg-white border-b border-neutral-200 overflow-hidden">
+          <div className="px-4 pt-2 pb-6 space-y-1">
+            {navItems.map((item) => (
+              <Link
+                key={item.name}
+                to={item.href}
+                className="block px-3 py-4 text-lg font-display uppercase tracking-wide border-b border-neutral-100"
+                onClick={() => setIsOpen(false)}
+              >
+                {item.name}
+              </Link>
+            ))}
+            <div className="pt-4">
+              <Link to="/membership" className="btn-primary block text-center py-4" onClick={() => setIsOpen(false)}>
+                Join
+              </Link>
             </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+          </div>
+        </div>
+      )}
     </nav>
   );
 }

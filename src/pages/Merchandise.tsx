@@ -18,15 +18,15 @@ export default function Merchandise() {
             { name: 'Sticker Pack', price: '$12.00', img: 'https://picsum.photos/seed/stickers/400/500' },
             { name: 'Notebook', price: '$22.00', img: 'https://picsum.photos/seed/notebook/400/500' }
           ].map((item, i) => (
-            <div key={i} className="group cursor-pointer">
+            <div key={i} className="cursor-pointer">
               <div className="aspect-[4/5] overflow-hidden bg-neutral-100 mb-4 relative">
                 <img 
                   src={item.img} 
                   alt={item.name} 
-                  className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-500"
+                  className="w-full h-full object-cover grayscale"
                   referrerPolicy="no-referrer"
                 />
-                <div className="absolute bottom-0 left-0 right-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform bg-brand text-white text-center font-display font-bold uppercase tracking-widest text-sm">
+                <div className="absolute bottom-0 left-0 right-0 p-4 bg-brand text-white text-center font-display font-bold uppercase tracking-widest text-sm">
                   Add to Cart
                 </div>
               </div>

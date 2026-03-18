@@ -91,7 +91,7 @@ export default function Home() {
                 ))}
               </ul>
               
-              <button className={`w-full py-3 font-display uppercase tracking-wider text-sm font-bold transition-all ${tier.highlight ? 'bg-brand text-white hover:bg-brand-dark' : 'bg-neutral-900 text-white hover:bg-neutral-800'}`}>
+              <button className={`w-full py-3 font-display uppercase tracking-wider text-sm font-bold ${tier.highlight ? 'bg-brand text-white hover:bg-brand-dark' : 'bg-neutral-900 text-white hover:bg-neutral-800'}`}>
                 {tier.cta}
               </button>
             </div>
@@ -135,7 +135,7 @@ export default function Home() {
           <p className="text-xl mb-12 opacity-90 max-w-2xl mx-auto">
             Whether you're a developer, researcher, or enthusiast, there's a place for you in the Agentics Foundation.
           </p>
-          <button className="bg-white text-brand px-12 py-4 font-display text-xl font-bold uppercase tracking-widest hover:bg-neutral-100 transition-all shadow-2xl hover:-translate-y-1">
+          <button className="bg-white text-brand px-12 py-4 font-display text-xl font-bold uppercase tracking-widest hover:bg-neutral-100 shadow-2xl">
             Become a Member
           </button>
         </div>

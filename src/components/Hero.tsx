@@ -1,6 +1,6 @@
 import React from 'react';
-import { motion } from 'motion/react';
 import { ArrowRight, Globe, Users, Zap } from 'lucide-react';
+import Logo from './Logo';
 
 export default function Hero() {
   return (
@@ -12,11 +12,7 @@ export default function Hero() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-          >
+          <div>
             <div className="inline-flex items-center gap-2 px-3 py-1 bg-brand/10 text-brand text-xs font-bold uppercase tracking-widest mb-6">
               <Zap size={14} />
               <span>Building the Future</span>
@@ -52,24 +48,19 @@ export default function Hero() {
                 <div className="text-xs text-neutral-500 uppercase tracking-widest mt-1">Projects</div>
               </div>
             </div>
-          </motion.div>
+          </div>
 
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 1, delay: 0.2 }}
-            className="relative hidden lg:block"
-          >
+          <div className="relative hidden lg:block">
             <div className="relative z-10 aspect-square overflow-hidden rounded-full border-[12px] border-neutral-50 shadow-2xl">
               <img 
                 src="https://images.unsplash.com/photo-1635070041078-e363dbe005cb?auto=format&fit=crop&q=80&w=1200" 
                 alt="Neural Network Visualization" 
-                className="w-full h-full object-cover grayscale brightness-50 hover:grayscale-0 hover:brightness-100 transition-all duration-1000"
+                className="w-full h-full object-cover grayscale brightness-50"
                 referrerPolicy="no-referrer"
               />
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="text-center">
-                  <Globe size={80} className="text-brand mx-auto mb-4 animate-pulse" />
+                  <Logo className="w-32 h-16 text-brand mx-auto mb-4" />
                   <div className="font-display text-2xl text-white font-bold tracking-tighter uppercase">Neural Mesh</div>
                   <div className="text-brand text-[10px] font-bold uppercase tracking-[0.3em]">Active Protocol</div>
                 </div>
@@ -77,31 +68,23 @@ export default function Hero() {
             </div>
             
             {/* Floating Data Points */}
-            <motion.div 
-              animate={{ x: [0, 15, 0], y: [0, -10, 0] }}
-              transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-              className="absolute top-10 -right-4 z-20 bg-white/90 backdrop-blur-sm p-3 shadow-lg border border-neutral-100 rounded-full px-5"
-            >
+            <div className="absolute top-10 -right-4 z-20 bg-white/90 backdrop-blur-sm p-3 shadow-lg border border-neutral-100 rounded-full px-5">
               <div className="flex items-center gap-2">
                 <div className="w-2 h-2 bg-brand rounded-full"></div>
                 <span className="text-[10px] font-bold uppercase tracking-widest">Synapse: 0.4ms</span>
               </div>
-            </motion.div>
+            </div>
 
-            <motion.div 
-              animate={{ x: [0, -15, 0], y: [0, 10, 0] }}
-              transition={{ duration: 7, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-              className="absolute bottom-10 -left-4 z-20 bg-white/90 backdrop-blur-sm p-3 shadow-lg border border-neutral-100 rounded-full px-5"
-            >
+            <div className="absolute bottom-10 -left-4 z-20 bg-white/90 backdrop-blur-sm p-3 shadow-lg border border-neutral-100 rounded-full px-5">
               <div className="flex items-center gap-2">
                 <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
                 <span className="text-[10px] font-bold uppercase tracking-widest">Nodes: 1.2M</span>
               </div>
-            </motion.div>
+            </div>
 
             {/* Decorative Blobs */}
-            <div className="absolute inset-0 bg-brand/5 rounded-full filter blur-3xl -z-10 animate-pulse"></div>
-          </motion.div>
+            <div className="absolute inset-0 bg-brand/5 rounded-full filter blur-3xl -z-10"></div>
+          </div>
         </div>
       </div>
     </section>
